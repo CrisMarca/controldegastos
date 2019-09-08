@@ -14,7 +14,11 @@ class CreateContactoTable extends Migration
     public function up()
     {
         Schema::create('contacto', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_contacto');
+            $table->char('nombre_contacto',30);
+            $table->char('apellido_contacto',30);
+            $table->date('fecha_de_nacimiento');
+            $table->integer('numero_contacto');        
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateContactoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacto');
+        Schema::dropIfExists('contacto'); 
     }
 }
