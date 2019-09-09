@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('/contactos', 'ContactoController');
+Route::resource('/ingresos', 'IngresoController');
+Route::resource('/gastos', 'GastoController');
